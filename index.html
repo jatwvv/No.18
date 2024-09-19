@@ -9,33 +9,47 @@
       sizes="32x32"
       href="assets/images/favicon-32x32.png"
     />
+    
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="script.js" defer></script>
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container1">
       <div class="content">
         <div class="header">
           <h1>Mortgage Calculator</h1>
-          <h3 id="clear">Clear All</h3>
+          <h3 id="clear"><input type="reset" style="background:none; height: fit-content; padding: 0;" value="Clear All"></h3>
         </div>
         <form>
           <div class="amount">
             <h3>Mortgage Amount</h3>
-            <span></span>
-            <input id="euro" type="number" />
+            <!-- <span></span>
+            <input  type="number" /> -->
+            <div class="input-group mb-3 no-wrap">
+              <span class="input-group-text" style="color: hsl(200, 42%, 24%) !important; background-color:  hsla(204, 48%, 89%, 0.7) !important;" id="basic-addon1">£</span>
+              <input type="text" id="euro" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
           </div>
           <div class="term-invest">
             <div class="term">
               <h3>Mortgage Term</h3>
-              <span></span>
-              <input id="year" type="number" />
+              <!-- <span></span>
+              <input  type="number" /> -->
+              <div class="input-group mb-3 no-wrap">
+                <input id="year" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" style="color: hsl(200, 42%, 24%) !important; background-color:  hsla(204, 48%, 89%, 0.7) !important;" id="basic-addon2">year</span>
+              </div>
             </div>
             <div class="rate">
               <h3>Interest Rate</h3>
-              <span></span>
-              <input id="persentage" type="number" />
+              <!-- <span></span>
+              <input  type="number" /> -->
+              <div class="input-group mb-3 no-wrap">
+                <input id="persentage" type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" style="color: hsl(200, 42%, 24%) !important; background-color:  hsla(204, 48%, 89%, 0.7) !important;" id="basic-addon2">%</span>
+              </div>
             </div>
           </div>
           <div class="radio">
@@ -49,7 +63,7 @@
             >
           </div>
         </form>
-        <button>
+        <button id="calc">
           <img src="assets/images/icon-calculator.svg" />Calculate Repayments
         </button>
       </div>
